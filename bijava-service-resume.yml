@@ -1,14 +1,4 @@
-server:
-  port: 9006
-
-#注册到Eureka服务中心
-eureka:
-  client:
-    service-url:
-      defaultZone: http://register-master:8760/eureka/,http://register-salve1:8761/eureka/,http://register-salve2:8762/eureka/
-  instance:
-    #服务实例中显示ip，而不是显示主机名（兼容老版本Eureka）
-    prefer-ip-address: true
-    #实例名称： 192.168.1.103:bijava-service-resume:8080，我们可以自定义它
-    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}:@project.version@
+bijava:
+  name: zhangsan
+  message: hello cloud
    
